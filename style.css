@@ -26,6 +26,16 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  animation: animateColor 5s linear infinite;
+}
+
+@keyframes animateColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 .container .cloud {
