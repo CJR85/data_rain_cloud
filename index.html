@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Rain Cloud</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -13,4 +14,26 @@
       </div>
     </div>
   </body>
+  <!-- JS -->
+  <script>
+    function rain() {
+      let cloud = document.querySelector('.cloud'),
+        e = document.createElement('div');
+      e.classList.add('drop');
+      cloud.appendChild(e);
+
+      let left = Math.floor(Math.random() * 300);
+
+      e.innerText = 'A';
+      e.style.left = left + 'px';
+
+      setTimeout(function () {
+        cloud.removeChild(e);
+      }, 2000);
+    }
+
+    setInterval(function () {
+      rain();
+    }, 20);
+  </script>
 </html>
