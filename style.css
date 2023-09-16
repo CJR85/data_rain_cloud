@@ -6,3 +6,46 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+:root {
+  --clr: #0f0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+.container {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container .cloud {
+  position: relative;
+  width: 100px;
+  height: 300px;
+  z-index: 100;
+  filter: drop-shadow(0 0 35px var(--clr));
+}
+
+.container .cloud h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: #000;
+  font-size: 2em;
+  z-index: 1000;
+  font-weight: 400;
+  padding: 0px 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  background: var(--clr);
+}
